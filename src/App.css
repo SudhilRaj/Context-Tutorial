@@ -1,3 +1,58 @@
-.App {
-  text-align: center;
+/* General Styles */
+.bg {
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+.para{
+  line-height: 1.5;
+}
+
+.btn {
+  border: none;
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Light Mode Styles */
+.bg-light {
+  background-color: #fff;
+}
+
+.heading-light {
+  color: #222;
+}
+
+.para-light {
+  color: #222;
+}
+
+.btn-light {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Dark Mode Styles */
+.bg-dark {
+  background-color: #222;
+}
+
+.heading-dark {
+  color: #fff;
+}
+
+.para-dark {
+  color: #fff;
+}
+
+.btn-dark {
+  background-color: #fff;
+  color: #222;
 }

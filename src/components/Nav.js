@@ -1,11 +1,17 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
+import SwitchButton from './Button';
 
 const Nav = () => {
+    const {theme} = useContext(ThemeContext);
+    const darkMode = theme.darkMode;
+
     return ( 
-        <div className="nav">
+        <div className={`nav ${darkMode ? "bg-light" : "bg-dark"}`}>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/context">Context</Link></li>
+                <li><Link to="/" className={`${darkMode ? "para-light" : "para-dark"}`}>Home</Link></li>
+                <li><Link to="/context" className={`${darkMode ? "para-light" : "para-dark"}`}>Todos Context</Link></li>
             </ul>
             <style jsx="true">
             {`
@@ -13,7 +19,6 @@ const Nav = () => {
                 display: flex;
                 flex: 1;
                 align-items: center;
-                background-color: blanchedalmond;
                 height: 50px;
             }
             
@@ -28,6 +33,7 @@ const Nav = () => {
             }
         `}
         </style>
+        <SwitchButton/>
         </div>
      );
 }
