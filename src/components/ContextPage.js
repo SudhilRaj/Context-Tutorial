@@ -9,7 +9,7 @@ const ContextPage = () => {
     const{theme} = useContext(ThemeContext);
     const darkMode = theme.darkMode;
 
-    // Fetching data here on a click by using the dispatch method from the context.
+    // Fetching data here on a click by using axios. Using the dispatch method to update the context.
     // You can also opt an useEffect method directly inside the context to perform these actions,
     // Then we need to send only the state values from the context not the dispatch method.
     const fetchTodos = () => {
